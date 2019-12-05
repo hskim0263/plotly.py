@@ -43,6 +43,7 @@ If your figure contains one or more traces of type `go.Scattermapbox`, `go.Choro
   2. The various traces in `data` are by default rendered above the base map (although this can be controlled via the `below` attribute).
   3. `layout.mapbox.layers` is an array that defines more layers that are by default rendered above the traces in `data` (although this can also be controlled via the `below` attribute).
 
+In respect to [attribution instructions](https://docs.mapbox.com/help/how-mapbox-works/attribution/), we added [sourceattribution](https://plot.ly/python/reference/#layout-mapbox-layers-items-layer-sourceattribution) attribute, which displays both `mapbox wordmark` and `text attribution` on our maps.
 #### Mapbox Access Tokens and When You Need Them
 
 The word "mapbox" in the trace names and `layout.mapbox` refers to the Mapbox.js open-source library, which is integrated into Plotly.py. If your basemap in `layout.mapbox.style` uses data from the Mapbox *service*, then you will need to register for a free account at https://mapbox.com/ and obtain a Mapbox Access token. This token should be provided in `layout.mapbox.access_token` (or, if using Plotly Express, via the `px.set_mapbox_access_token()` configuration function).
